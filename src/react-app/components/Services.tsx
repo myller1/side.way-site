@@ -8,37 +8,43 @@ const services = [
     icon: Palette,
     title: 'Branding e Identidade Visual',
     description: 'Criamos logos únicos, paletas de cores estratégicas e brandbooks completos que capturam a essência da sua marca.',
-    features: ['Logo e Identidade', 'Paleta de Cores', 'Brandbook Completo', 'Aplicações Visuais']
+    features: ['Logo e Identidade', 'Paleta de Cores', 'Brandbook Completo', 'Aplicações Visuais'],
+    whatsappMessage: 'Olá, vim pelo site da *side.way*. Gostaria de saber mais sobre *Branding e Identidade Visual*.'
   },
   {
     icon: MessageSquare,
     title: 'Verbal e Conteúdo',
     description: 'Desenvolvemos tom de voz autêntico e criamos conteúdos otimizados para SEO que conectam com seu público.',
-    features: ['Tom de Voz', 'Legendas SEO', 'Estratégia de Conteúdo', 'Copywriting']
+    features: ['Tom de Voz', 'Legendas SEO', 'Estratégia de Conteúdo', 'Copywriting'],
+    whatsappMessage: 'Olá, vim pelo site da *side.way*. Gostaria de saber mais sobre *Verbal e Conteúdo*.'
   },
   {
     icon: Camera,
     title: 'Visual e Audiovisual',
     description: 'Produzimos designs impactantes para posts e edições profissionais que elevam sua presença digital.',
-    features: ['Design de Posts', 'Edição de Vídeos', 'Stories Criativos', 'Motion Graphics']
+    features: ['Design de Posts', 'Edição de Vídeos', 'Stories Criativos', 'Motion Graphics'],
+    whatsappMessage: 'Olá, vim pelo site da *side.way*. Gostaria de saber mais sobre *Visual e Audiovisual*.'
   },
   {
     icon: Globe,
     title: 'Sites e Landing Pages',
     description: 'Desenvolvemos sites responsivos e landing pages de alta conversão focados na experiência do usuário.',
-    features: ['Sites Responsivos', 'Landing Pages', 'E-commerce', 'UX/UI Design']
+    features: ['Sites Responsivos', 'Landing Pages', 'E-commerce', 'UX/UI Design'],
+    whatsappMessage: 'Olá, vim pelo site da *side.way*. Gostaria de saber mais sobre *Sites e Landing Pages*.'
   },
   {
     icon: TrendingUp,
     title: 'Marketing e Performance',
     description: 'Criamos estratégias de marketing digital e gerenciamos suas redes sociais com foco em resultados.',
-    features: ['Gestão de Redes', 'Relatórios Analíticos', 'Campanhas Pagas', 'Growth Hacking']
+    features: ['Gestão de Redes', 'Relatórios Analíticos', 'Insights Valiosos', 'Growth Hacking'],
+    whatsappMessage: 'Olá, vim pelo site da *side.way*. Gostaria de saber mais sobre *Marketing e Performance*.'
   },
   {
     icon: Lightbulb,
     title: 'Consultoria Estratégica',
     description: 'Oferecemos direcionamento estratégico personalizado para acelerar o crescimento da sua marca.',
-    features: ['Análise de Mercado', 'Posicionamento', 'Planejamento 360°', 'Inovação Digital']
+    features: ['Análise de Mercado', 'Posicionamento', 'Planejamento 360°', 'Inovação Digital'],
+    whatsappMessage: 'Olá, vim pelo site da *side.way*. Gostaria de saber mais sobre *Consultoria Estratégica*.'
   }
 ];
 
@@ -121,12 +127,15 @@ export default function Services() {
 
                 {/* Hover Effect */}
                 <div className="mt-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <motion.div
+                  <motion.a
+                    href={`https://wa.me/5511945749907?text=${encodeURIComponent(service.whatsappMessage)}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     whileHover={{ scale: 1.05 }}
-                    className="inline-flex items-center text-[#A8BBA2] font-['Inter'] font-medium cursor-pointer"
+                    className="inline-flex items-center text-[#A8BBA2] font-['Inter'] font-medium cursor-pointer hover:text-[#A8BBA2]/80 transition-colors duration-200"
                   >
                     Saiba mais →
-                  </motion.div>
+                  </motion.a>
                 </div>
               </div>
               </motion.div>

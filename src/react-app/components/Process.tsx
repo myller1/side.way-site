@@ -170,7 +170,7 @@ export default function Process() {
           transition={{ delay: 1, duration: 0.8 }}
           className="text-center mt-20"
         >
-          <div className="bg-gradient-to-r from-[#2F4858] to-[#A8BBA2] rounded-2xl p-8 md:p-12">
+          <div className="bg-[#A8BBA2] rounded-2xl p-8 md:p-12">
             <h3 className="text-3xl md:text-4xl font-bold text-white font-['Poppins'] mb-6">
               Pronto para começar sua jornada?
             </h3>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion, useReducedMotion } from 'framer-motion';
-import { Facebook, Frame, Instagram, Linkedin, Youtube } from 'lucide-react';
+import { Facebook, Instagram, MessageCircle, Music } from 'lucide-react';
 
 interface FooterLink {
   title: string;
@@ -15,39 +15,12 @@ interface FooterSection {
 
 const footerLinks: FooterSection[] = [
   {
-    label: 'Product',
+    label: 'Redes Sociais',
     links: [
-      { title: 'Features', href: '#features' },
-      { title: 'Pricing', href: '#pricing' },
-      { title: 'Testimonials', href: '#testimonials' },
-      { title: 'Integration', href: '/' },
-    ],
-  },
-  {
-    label: 'Company',
-    links: [
-      { title: 'FAQs', href: '/faqs' },
-      { title: 'About Us', href: '/about' },
-      { title: 'Privacy Policy', href: '/privacy' },
-      { title: 'Terms of Services', href: '/terms' },
-    ],
-  },
-  {
-    label: 'Resources',
-    links: [
-      { title: 'Blog', href: '/blog' },
-      { title: 'Changelog', href: '/changelog' },
-      { title: 'Brand', href: '/brand' },
-      { title: 'Help', href: '/help' },
-    ],
-  },
-  {
-    label: 'Social Links',
-    links: [
-      { title: 'Facebook', href: '#', icon: Facebook },
-      { title: 'Instagram', href: '#', icon: Instagram },
-      { title: 'Youtube', href: '#', icon: Youtube },
-      { title: 'LinkedIn', href: '#', icon: Linkedin },
+      { title: 'Facebook', href: 'https://www.facebook.com/side.wayyy', icon: Facebook },
+      { title: 'Instagram', href: 'https://www.instagram.com/side.wayyy/', icon: Instagram },
+      { title: 'TikTok', href: 'https://www.tiktok.com/@side.wayyy', icon: Music },
+      { title: 'WhatsApp', href: 'https://wa.me/5511945749907', icon: MessageCircle },
     ],
   },
 ];
@@ -66,25 +39,27 @@ export default function Footer() {
       </div>
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
-        <div className="grid w-full gap-8 xl:grid-cols-3 xl:gap-8">
+        <div className="grid w-full gap-8 lg:grid-cols-2 xl:gap-12">
           <AnimatedContainer className="space-y-4">
             <div className="flex items-center justify-start"><div className="h-48 aspect-[16/9] transform -translate-x-[40%]"><img src="/images/logo-arvore.svg" alt="Side.way Logo" className="w-full h-full object-contain transform origin-left scale-[1.55]" /></div></div>
             {/* copyright moved to bottom */}
           </AnimatedContainer>
 
-          <div className="mt-10 grid grid-cols-2 gap-8 md:grid-cols-4 xl:col-span-2 xl:mt-0">
+          <div className="mt-10 flex justify-center lg:justify-center xl:justify-start lg:mt-0 lg:pl-8 lg:ml-[60%]">
             {footerLinks.map((section, index) => (
               <AnimatedContainer key={section.label} delay={0.1 + index * 0.1}>
                 <div className="mb-10 md:mb-0">
-                  <h3 className="text-xs">{section.label}</h3>
-                  <ul className="text-white/70 mt-4 space-y-2 text-sm">
+                  <h3 className="text-sm font-medium mb-4">{section.label}</h3>
+                  <ul className="text-white/70 space-y-3 text-sm">
                     {section.links.map((link) => (
                       <li key={link.title}>
                         <a
                           href={link.href}
-                          className="hover:text-white inline-flex items-center transition-all duration-300"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="hover:text-white inline-flex items-center transition-all duration-300 hover:scale-105"
                         >
-                          {link.icon && <link.icon className="mr-1 w-4 h-4" />}
+                          {link.icon && <link.icon className="mr-2 w-4 h-4" />}
                           {link.title}
                         </a>
                       </li>
