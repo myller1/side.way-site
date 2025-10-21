@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="180" height="180" viewBox="0 0 180 180">
+  <!-- Apple touch icon da Sideway -->
+  <rect width="180" height="180" rx="25" ry="25" fill="#A8BBA2"/>
+  
+  <!-- Logo Sideway simplificada para ícone -->
+  <g transform="translate(30, 30)">
+    <!-- Letra S principal -->
+    <path d="M20 30 C40 20 60 20 80 30 C90 40 90 50 80 60 C60 70 40 70 20 60 C10 50 10 40 20 30 Z" fill="#4A4A4A"/>
+    <path d="M40 60 C60 70 80 70 100 60 C110 70 110 80 100 90 C80 100 60 100 40 90 C30 80 30 70 40 60 Z" fill="#4A4A4A"/>
+    
+    <!-- Elementos decorativos */
+    <circle cx="100" cy="20" r="8" fill="#4A4A4A"/>
+    <circle cx="20" cy="100" r="6" fill="#4A4A4A"/>
+    
+    <!-- Texto Sideway (opcional) -->
+    <text x="60" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#4A4A4A">SIDEWAY</text>
+  </g>
+</svg>
