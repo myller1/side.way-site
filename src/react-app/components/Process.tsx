@@ -20,7 +20,7 @@ const processSteps = [
     icon: Lightbulb,
     number: '02',
     title: 'Estratégia 360',
-    description: 'Desenvolvemos uma estratégia holística que conecta todos os pontos de contato da sua marca com o público.',
+    description: 'Desenvolvemos uma estratégia completa que conecta todos os pontos de contato da sua marca com o público.',
     details: [
       'Definição de posicionamento',
       'Criação de personas',
@@ -174,7 +174,7 @@ export default function Process() {
             <h3 className="text-3xl md:text-4xl font-bold text-white font-['Poppins'] mb-6">
               Pronto para começar sua jornada?
             </h3>
-            <p className="text-white/90 font-['Inter'] text-lg mb-8 max-w-2xl mx-auto">
+            <p className="font-['Inter'] text-lg mb-8 max-w-2xl mx-auto" style={{ color: '#ffffffff' }}>
               Cada projeto é único, assim como cada marca. Vamos conversar sobre 
               como podemos transformar sua visão em realidade digital.
             </p>
@@ -182,7 +182,8 @@ export default function Process() {
               href={`mailto:sidewaydigital@gmail.com?subject=${encodeURIComponent('Contato via site')}&body=${encodeURIComponent('Olá! Gostaria de conversar com a Sideway.')}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block px-8 py-3 bg-white text-black font-['Montserrat'] font-extrabold rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
+              className="inline-block px-8 py-3 bg-white font-['Montserrat'] font-extrabold rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
+              style={{ color: '#4B4B4B' }}
             >
               Vamos conversar
             </a>

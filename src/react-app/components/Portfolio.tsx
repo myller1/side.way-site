@@ -41,7 +41,7 @@ const portfolioItems = [
     title: 'Infratech Produções',
     category: 'Audiovisual & Conteúdo',
     description: 'Criamos uma narrativa visual poderosa que destaca a inovação tecnológica e a criatividade da produtora.',
-    challenge: 'Destacar-se no mercado audiovisual saturado',
+    challenge: 'Destacar-se no mercado de eventos saturado',
     solution: 'Portfólio digital imersivo e estratégia de conteúdo',
     results: [
       '300% aumento na visualização do portfólio',
@@ -49,7 +49,7 @@ const portfolioItems = [
       'Projetos internacionais conquistados'
     ],
     tags: ['Portfólio Digital', 'Motion Graphics', 'Brand Film'],
-    image: '/images/infratech-portifolio.jpg',
+    image: '/images/infratech-portifolio-carol.jpg',
     color: '#A8BBA2'
   }
 ];
@@ -187,14 +187,17 @@ export default function Portfolio() {
             </div>
 
             {/* CTA */}
-            <motion.button
+            <motion.a
+              href="https://www.instagram.com/side.wayyy/"
+              target="_blank"
+              rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="inline-flex items-center gap-2 bg-[#A8BBA2] hover:bg-[#A8BBA2]/90 text-[#1a1a1a] font-['Montserrat'] font-semibold px-6 py-3 rounded-full transition-colors duration-300"
             >
-              Ver caso completo
+              Case completo
               <ExternalLink className="w-4 h-4" />
-            </motion.button>
+            </motion.a>
           </div>
         </motion.div>
 
@@ -208,13 +211,16 @@ export default function Portfolio() {
           <p className="text-white/80 font-['Inter'] mb-6">
             Quer ver mais do nosso trabalho e descobrir como podemos ajudar sua marca?
           </p>
-          <motion.button
+          <motion.a
+            href="https://www.instagram.com/side.wayyy/"
+            target="_blank"
+            rel="noopener noreferrer"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="bg-[#A8BBA2] hover:bg-[#A8BBA2]/90 text-[#1a1a1a] font-['Montserrat'] font-semibold px-8 py-4 rounded-full transition-colors duration-300 shadow-lg"
           >
             Ver portfólio completo
-          </motion.button>
+          </motion.a>
         </motion.div>
       </div>
     </section>

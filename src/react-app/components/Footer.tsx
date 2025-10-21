@@ -17,9 +17,9 @@ const footerLinks: FooterSection[] = [
   {
     label: 'Redes Sociais',
     links: [
-      { title: 'Facebook', href: 'https://www.facebook.com/side.wayyy', icon: Facebook },
+      { title: 'Facebook', href: 'https://www.facebook.com/profile.php?id=61582723167348', icon: Facebook },
       { title: 'Instagram', href: 'https://www.instagram.com/side.wayyy/', icon: Instagram },
-      { title: 'TikTok', href: 'https://www.tiktok.com/@side.wayyy', icon: Music },
+      { title: 'TikTok', href: 'https://www.tiktok.com/@side.wayyy?_t=ZM-90k1CbIzVIS&_r=1', icon: Music },
       { title: 'WhatsApp', href: 'https://wa.me/5511945749907', icon: MessageCircle },
     ],
   },
