@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
-import { useRef, useState } from 'react';
-import { Heart, Target, Eye, Star, BadgeCheck, Users, FileText, Lightbulb, Palette, Code, Coffee, Zap, Sparkles } from 'lucide-react';
+import { useRef } from 'react';
+import { Heart, Target, Eye, Star, BadgeCheck, Code, Lightbulb, Sparkles, Palette } from 'lucide-react';
 
 const values = [
   {

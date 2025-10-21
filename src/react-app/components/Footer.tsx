@@ -26,8 +26,6 @@ const footerLinks: FooterSection[] = [
 ];
 
 export default function Footer() {
-  const currentYear = new Date().getFullYear();
-
   return (
     <footer className="bg-[#1a1a1a] text-white py-10 md:py-12 lg:py-16 relative overflow-hidden">
       {/* Divider line */}

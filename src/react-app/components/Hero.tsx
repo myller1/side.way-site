@@ -3,7 +3,6 @@ import { motion } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
 
 export default function Hero() {
-  const [typewriterText, setTypewriterText] = useState('');
   const fullText = "Good way - right side.";
   const [showCTA, setShowCTA] = useState(false);
   const [currentLogo, setCurrentLogo] = useState('/images/logo-arvore.svg');
@@ -111,7 +110,6 @@ export default function Hero() {
     const typewriter = setInterval(() => {
       if (index < fullText.length) {
         currentText += fullText[index];
-        setTypewriterText(currentText);
         index++;
       } else {
         clearInterval(typewriter);
