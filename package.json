@@ -38,7 +38,9 @@
     "wrangler": "^4.33.0"
   },
   "scripts": {
-    "build": "tsc -b && vite build",
+    "build": "node build-vercel.js",
+    "build:original": "tsc -b && vite build",
+    "build:safe": "npm install --no-optional && tsc -b && vite build",
     "cf-typegen": "wrangler types",
     "check": "tsc && vite build && wrangler deploy --dry-run",
     "dev": "vite --port 5176 --strictPort --host",
@@ -49,10 +51,16 @@
     "npm": ">=8.0.0"
   },
   "overrides": {
-    "rollup": "^4.28.1"
+    "rollup": "^4.28.1",
+    "@rollup/rollup-linux-x64-gnu": "npm:@rollup/rollup-win32-x64-msvc@^4.28.1",
+    "@rollup/rollup-darwin-x64": "npm:@rollup/rollup-win32-x64-msvc@^4.28.1",
+    "@rollup/rollup-darwin-arm64": "npm:@rollup/rollup-win32-x64-msvc@^4.28.1"
   },
   "resolutions": {
-    "rollup": "^4.28.1"
+    "rollup": "^4.28.1",
+    "@rollup/rollup-linux-x64-gnu": "npm:@rollup/rollup-win32-x64-msvc@^4.28.1",
+    "@rollup/rollup-darwin-x64": "npm:@rollup/rollup-win32-x64-msvc@^4.28.1",
+    "@rollup/rollup-darwin-arm64": "npm:@rollup/rollup-win32-x64-msvc@^4.28.1"
   },
   "optionalDependencies": {},
   "pnpm": {
@@ -60,5 +68,13 @@
       "os": ["current"],
       "cpu": ["current"]
     }
+  },
+  "installConfig": {
+    "hoistingLimits": "workspaces"
+  },
+  "npm": {
+    "install-strategy": "shallow",
+    "fund": false,
+    "audit": false
   }
 }
