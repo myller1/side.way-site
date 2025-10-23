@@ -42,5 +42,9 @@
     "check": "tsc && vite build && wrangler deploy --dry-run",
     "dev": "vite --port 5176 --strictPort --host",
     "lint": "eslint ."
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
   }
 }
