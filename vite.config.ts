@@ -17,6 +17,13 @@ export default defineConfig({
     sourcemap: false,
     minify: "esbuild",
     rollupOptions: {
+      external: (id) => {
+        // Evita problemas com dependências opcionais do Rollup
+        if (id.includes('@rollup/rollup-')) {
+          return false;
+        }
+        return false;
+      },
       output: {
         manualChunks: {
           vendor: ["react", "react-dom"],
