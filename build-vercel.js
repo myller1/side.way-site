@@ -36,11 +36,7 @@ try {
     
     log('📦 Reinstalando dependências com configurações otimizadas...');
     execSync('npm install --omit=optional --no-fund --no-audit', { 
-      stdio: 'inherit',
-      env: {
-        ...process.env,
-        NPM_CONFIG_OPTIONAL: 'false'
-      }
+      stdio: 'inherit'
     });
   }
 
@@ -49,14 +45,13 @@ try {
   execSync('npx tsc -b', { stdio: 'inherit' });
   log('✅ TypeScript build concluído');
 
-  // 3. Executar Vite build com variáveis de ambiente para evitar problemas com Rollup
+  // 3. Executar Vite build
   log('🔨 Executando Vite build...');
   execSync('npx vite build', { 
     stdio: 'inherit',
     env: {
       ...process.env,
-      NODE_ENV: 'production',
-      NPM_CONFIG_OPTIONAL: 'false'
+      NODE_ENV: 'production'
     }
   });
   log('✅ Vite build concluído');
