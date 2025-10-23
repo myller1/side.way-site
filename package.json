@@ -2,6 +2,7 @@
   "name": "sideway-digital",
   "private": true,
   "version": "1.0.0",
+  "type": "module",
   "description": "Site oficial da Sideway - Agência de Social Media Autêntica",
   "dependencies": {
     "@hono/zod-validator": "^0.5.0",
