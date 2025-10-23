@@ -54,5 +54,11 @@
   "resolutions": {
     "rollup": "^4.28.1"
   },
-  "optionalDependencies": {}
+  "optionalDependencies": {},
+  "pnpm": {
+    "supportedArchitectures": {
+      "os": ["current"],
+      "cpu": ["current"]
+    }
+  }
 }
